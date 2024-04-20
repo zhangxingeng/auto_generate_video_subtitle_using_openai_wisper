@@ -4,19 +4,34 @@
 ### get started
 - open command prompt (If you don't know how to do this...you should know how to do this...)
   - Ask chatgpt (How to open terminal detailed instruction for windows / mac / linux)
-- run
+- To clone this project to your computer, run:
   ```sh
    git clone https://github.com/zhangxingeng/auto_generate_video_subtitle_using_openai_wisper.git
   ````
-- run ```pip install -r requirements.txt``` to setup the environment
+- To setup the python environment for inference, run:
+  ```sh
+  pip install -r requirements.txt
+  ```
 - find the language you want the subtitles to be translated to lets call it `<lang>`
   - Example of `<lang>`: `en`: english, `de`: german, `ru`: russian, `ja`: japanese, etcs
-- to see all languages, just run ```python main.py --list_lang```
-- one you found your language, run ```python main.py lang=<lang>``` to generate folder for your video
-  - Example: ```python main.py lang=en``` for english
+- to see all languages, just run
+  ```
+  python main.py --list_lang
+  ```
+- one you found your language, run the following to generate folder for your video:
+  ```
+  python main.py lang=<lang>
+  ```
+  - Example (for english):
+    ```
+    python main.py lang=en
+    ``` 
 - Now you should find empty foler `data/<lang>`
 - put your video files in folder, recursive folder is fine
-- run ```python main.py lang=<lang>``` to start generating subtitles (it will take quite a wile depending on the length of the video, and your GPU speed)
+- To start generating subtitles (it will take quite a wile depending on the length of the video, and your GPU speed):
+  ```
+  python main.py lang=<lang>
+  ```
 - wait for tts files show up in the same directory!
 
 ### TODOs
