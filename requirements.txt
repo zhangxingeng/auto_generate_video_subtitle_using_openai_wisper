@@ -1,0 +1,5 @@
+torch
+torchvision
+torchaudio
+
+git+https://github.com/169/whisper.git@marker#egg=openai-whisper
