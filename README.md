@@ -4,7 +4,7 @@
 ### get started
 - open command prompt (If you don't know how to do this...you should know how to do this...)
   - Ask chatgpt (How to open terminal detailed instruction for windows / mac / linux)
-- run `git clone `
+- run `git clone https://github.com/zhangxingeng/auto_generate_video_subtitle_using_openai_wisper.git`
 - run `pip install -r requirements.txt` to setup the environment
 - find the language you want the subtitles to be translated to lets call it `<lang>`
   - Example of `<lang>`: `en`: english, `de`: german, `ru`: russian, `ja`: japanese, etcs
