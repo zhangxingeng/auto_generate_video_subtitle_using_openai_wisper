@@ -15,22 +15,18 @@
 - find the language you want the subtitles to be translated to lets call it `<lang>`
   - Example of `<lang>`: `en`: english, `de`: german, `ru`: russian, `ja`: japanese, etcs
 - to see all languages, just run
-  ```
+  ```sh
   python main.py --list_lang
   ```
-- one you found your language, run the following to generate folder for your video:
+- one you found your language, run the following to generate folder for your video (here we use english as example):
+  ```sh
+  python main.py lang=en
   ```
-  python main.py lang=<lang>
-  ```
-  - Example (for english):
-    ```
-    python main.py lang=en
-    ``` 
-- Now you should find empty foler `data/<lang>`
+- Now you should find empty foler `data/en/`
 - put your video files in folder, recursive folder is fine
 - To start generating subtitles (it will take quite a wile depending on the length of the video, and your GPU speed):
-  ```
-  python main.py lang=<lang>
+  ```sh
+  python main.py lang=en
   ```
 - wait for tts files show up in the same directory!
 
