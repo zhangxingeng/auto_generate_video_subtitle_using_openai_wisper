@@ -68,10 +68,13 @@ if __name__ == "__main__":
         # if srt file already exists, skip
         _msg(f"------ Starting: {vid_path.name} ------")
         vtt_path = vid_path.with_suffix(f".{LANGUAGE}.vtt")
+        audio_path = vid_path.with_suffix(AUDIO_TYPE)
         if vtt_path.exists():
+            if audio_path.exists():
+                audio_path.unlink()  # remove temp files
             _msg("vtt already exists, skip to next video.")
             continue
-        audio_path = vid_path.with_suffix(AUDIO_TYPE)
+
         if check_audio_integrity(audio_path) is False:
             audio_path = extract_audio(Path(vid_path), use_cuda, suffix=AUDIO_TYPE)
         pass_cond = audio_path.exists() and check_audio_integrity(audio_path)
@@ -87,4 +90,9 @@ if __name__ == "__main__":
 
         vtt_str_list = segment_to_vtt(res_segment)
         write_vtt(vtt_str_list, vtt_path)
+        # remove audio file
+        if audio_path.exists():
+            audio_path.unlink()
         RES = _msg("generate vtt file", yes=vtt_path.exists())
+
+    _msg("------ All Task Finished: Exiting ------")

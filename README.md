@@ -15,7 +15,6 @@
 - put your video files in folder, recursive folder is fine
 - run `python main.py lang=<lang>` to start generating subtitles (it will take quite a wile depending on the length of the video, and your GPU speed)
 - wait for tts files show up in the same directory!
-- Recommendation: move finished videos out of the folder to avoid re-generating them again
 
 ### TODOs
 - For me personal use so no extra features like keep record of what is generated and start from where it left off, will add it if I got more github stars.
